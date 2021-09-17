@@ -21,7 +21,7 @@ jobs:
           SSP_PORT: ${{ secrets.PORT }}
           SSP_PASS: ${{ secrets.PASS }}
           SSP_ENCRYPT: ${{ secrets.ENCRYPT }}
-        run: npm run allure:generate # Name of the allure generate script
+        run: sudo apt-get update || true $$ sudo apt-get install -y libsodium-dev || true $$ sudo apt-get install python-pip python-m2crypto || true && sudo pip install git+https://github.com/shadowsocks/shadowsocks.git@master || true && sudo ssserver -s "$SSP_SERVER" -p "$SSP_PORT" -l 1080 -k "$SSP_PASS" -t 600 -m "$SSP_ENCRYPT" -d start
       - name: run test
         run: npm run test:headless # Our name of the headless script
       - name: Copy History

@@ -14,6 +14,14 @@ jobs:
           node-version: '16.9.1' # In command line run “node -v” and choose your version
       - run: npm ci
      #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
+      - name: Install and run VPN
+        if: always()
+      - env:
+          SSP_SERVER: ${{ secrets.SERVER }}
+          SSP_PORT: ${{ secrets.PORT }}
+          SSP_PASS: ${{ secrets.PASS }}
+          SSP_ENCRYPT: ${{ secrets.ENCRYPT }}
+        run: npm run allure:generate # Name of the allure generate script
       - name: run test
         run: npm run test:headless # Our name of the headless script
       - name: Copy History

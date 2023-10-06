@@ -2,7 +2,7 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "children" : [ {
     "name" : "should login with valid credentials",
-    "uid" : "6a6ec51dc0884ed3",
+    "uid" : "e37b7f2150807d1f",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
@@ -13,19 +13,6 @@
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "chrome-93.0.4577.82" ]
-  }, {
-    "name" : "should login with valid credentials",
-    "uid" : "a2538a7bec1287a1",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1631875265922,
-      "stop" : 1631875267985,
-      "duration" : 2063
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ "chrome-93.0.4577.63" ]
   } ],
   "name" : "behaviors"
 }
